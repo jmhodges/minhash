@@ -1,32 +1,38 @@
 = minhash
 
-* FIX (url)
+* http://example.com
 
 == DESCRIPTION:
 
-FIX (describe your package)
+ Runs the MinHash algo across some strings using the murmur hash
+ function.
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+* Does it right.
+
+* Only works well for datasets with fewer than 2**32 (~4 billion)
+  unique items in it. Larger than that and, due to use our hash
+  function using unsigned 64-bit integers, we run into the birthday
+  paradox.
 
 == SYNOPSIS:
-
-  FIX (code sample of usage)
+  # 23 can be any unsigned 32-bit integer, a la the MurmurHash docs.
+  MinHash.minhash(['a', 'foo', 'c'], 23)
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+* murmur_hash gem
 
 == INSTALL:
 
-* FIX (sudo gem install, anything else)
+* sudo gem install minhash
 
 == LICENSE:
 
 (The MIT License)
 
-Copyright (c) 2009 FIX
+Copyright (c) 2009 Jeff Hodges
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
