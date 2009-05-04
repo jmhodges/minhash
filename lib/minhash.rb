@@ -1,3 +1,5 @@
+require 'murmur_hash'
+
 module MinHash
   VERSION = '0.9.9'
   # We use murmur_hash64 because we really do need 2**64 -1 items and

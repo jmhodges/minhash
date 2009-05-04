@@ -1,4 +1,5 @@
 require "test/unit"
+require "rubygems"
 require "minhash"
 
 class TestMinHash < Test::Unit::TestCase
