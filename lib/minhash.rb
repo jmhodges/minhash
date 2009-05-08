@@ -14,4 +14,13 @@ module MinHash
     end
     val
   end
+
+  def self.minhash32(history, seed)
+    val = Infinity
+    Array(history).each do |item|
+      n = MurmurHash.murmur_hash(item, seed)
+      val = n if n < val
+    end
+    val
+  end
 end
